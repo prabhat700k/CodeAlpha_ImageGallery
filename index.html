@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | Code Alpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Visual Gallery<span>.</span></h1>
+        <p>Explore the beauty of the world</p>
+    </header>
+
+    <main class="container">
+        <nav class="filters" aria-label="Image categories">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+            <button class="filter-btn" data-filter="architecture">
+                Architecture
+            </button>
+        </nav>
+
+        <section class="gallery" id="gallery">
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+                     alt="Beautiful mountain lake" loading="lazy">
+                <div class="overlay"><h3>Mountain Escape</h3><p>Nature</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80"
+                     alt="Lion in the wild" loading="lazy">
+                <div class="overlay"><h3>Wild Beauty</h3><p>Animals</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80"
+                     alt="Modern architectural building" loading="lazy">
+                <div class="overlay"><h3>Modern Lines</h3><p>Architecture</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+                     alt="Sunlight shining through a forest" loading="lazy">
+                <div class="overlay"><h3>Forest Dreams</h3><p>Nature</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80"
+                     alt="Golden dog outdoors" loading="lazy">
+                <div class="overlay"><h3>Friendly Face</h3><p>Animals</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"
+                     alt="Contemporary white building" loading="lazy">
+                <div class="overlay"><h3>Urban Design</h3><p>Architecture</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                     alt="Scenic landscape under the sky" loading="lazy">
+                <div class="overlay"><h3>Open Horizons</h3><p>Nature</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80"
+                     alt="Cute dog portrait" loading="lazy">
+                <div class="overlay"><h3>Little Explorer</h3><p>Animals</p></div>
+            </article>
+
+            <article class="gallery-item" data-category="architecture">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80"
+                     alt="Geometric building design" loading="lazy">
+                <div class="overlay"><h3>City Shapes</h3><p>Architecture</p></div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox"
+         role="dialog" aria-modal="true"
+         aria-label="Image preview" aria-hidden="true">
+
+        <button class="close-btn" id="closeBtn"
+                aria-label="Close image preview">&times;</button>
+
+        <button class="nav-btn prev-btn" id="prevBtn"
+                aria-label="Previous image">&#10094;</button>
+
+        <figure class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+            <figcaption id="caption"></figcaption>
+        </figure>
+
+        <button class="nav-btn next-btn" id="nextBtn"
+                aria-label="Next image">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>Designed with ❤️ | Prabhat Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
